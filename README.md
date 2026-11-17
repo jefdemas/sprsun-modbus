@@ -1,4 +1,4 @@
-> 🔧 **Patched fork (3.5.1).** The only change versus upstream is in `custom_components/sprsun_modbus/manifest.json`: the dependency pin was relaxed from `pymodbus==3.11.2` to `pymodbus>=3.11.2`, so the integration installs on Home Assistant 2026.11+ (which bundles pymodbus 3.13.x). The integration code already uses the modern pymodbus API (`device_id=`), so no code changes were needed. All credit to the original author [@stasek44](https://github.com/stasek44/sprsun-modbus).
+> 🔧 **Patched fork (3.5.2, Nederlandstalig).** The only change versus upstream is in `custom_components/sprsun_modbus/manifest.json`: the dependency pin was relaxed from `pymodbus==3.11.2` to `pymodbus>=3.11.2`, so the integration installs on Home Assistant 2026.11+ (which bundles pymodbus 3.13.x). The integration code already uses the modern pymodbus API (`device_id=`), so no code changes were needed. All entity names, modes and the config dialog have been translated to Dutch. All credit to the original author [@stasek44](https://github.com/stasek44/sprsun-modbus).
 
 # SPRSUN Heat Pump Modbus Integration for Home Assistant
 

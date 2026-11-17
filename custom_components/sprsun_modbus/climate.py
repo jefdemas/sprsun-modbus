@@ -72,7 +72,7 @@ class SPRSUNClimate(CoordinatorEntity, ClimateEntity):
         """Initialize the climate entity."""
         super().__init__(coordinator)
         
-        self._attr_name = f"{config_entry.data[CONF_NAME]} Heating/Cooling"
+        self._attr_name = f"{config_entry.data[CONF_NAME]} Verwarmen/Koelen"
         self._attr_unique_id = f"{config_entry.entry_id}_climate"
         
         # Device info
@@ -80,7 +80,7 @@ class SPRSUNClimate(CoordinatorEntity, ClimateEntity):
             "identifiers": {(DOMAIN, config_entry.entry_id)},
             "name": config_entry.data[CONF_NAME],
             "manufacturer": "SPRSUN",
-            "model": "Heat Pump",
+            "model": "Warmtepomp",
         }
     
     def _get_cache_value(self, key: str, default=None):
@@ -399,7 +399,7 @@ class SPRSUNDHWClimate(CoordinatorEntity, ClimateEntity):
         """Initialize the DHW climate entity."""
         super().__init__(coordinator)
         
-        self._attr_name = f"{config_entry.data[CONF_NAME]} DHW"
+        self._attr_name = f"{config_entry.data[CONF_NAME]} Tapwater"
         self._attr_unique_id = f"{config_entry.entry_id}_dhw_climate"
         
         # Device info
@@ -407,7 +407,7 @@ class SPRSUNDHWClimate(CoordinatorEntity, ClimateEntity):
             "identifiers": {(DOMAIN, config_entry.entry_id)},
             "name": config_entry.data[CONF_NAME],
             "manufacturer": "SPRSUN",
-            "model": "Heat Pump",
+            "model": "Warmtepomp",
         }
     
     def _get_cache_value(self, key: str, default=None):

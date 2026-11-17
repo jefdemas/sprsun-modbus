@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SPRSUN-warmtepomp configureren",
+        "description": "Stel de verbinding met je SPRSUN-warmtepomp via Modbus TCP in.\n\n**Belangrijk:** zorg dat de timeout van je Elfin W11-gateway op minstens {elfin_timeout} seconden staat.\n\nAanbevolen pollinterval: {recommended_scan} seconden.",
+        "data": {
+          "name": "Apparaatnaam",
+          "host": "Host (IP-adres)",
+          "port": "Poort",
+          "device_address": "Modbus-apparaatadres (1-247)",
+          "scan_interval": "Pollinterval (5-300 seconden)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbinden met het Modbus-apparaat is mislukt. Controleer host, poort en apparaatadres.",
+      "unknown": "Onverwachte fout opgetreden."
+    },
+    "abort": {
+      "already_configured": "Apparaat is al geconfigureerd."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SPRSUN-warmtepomp opties",
+        "description": "Pas het pollinterval aan (nu {current_interval}s). Zorg dat de Elfin W11-timeout minstens {elfin_timeout} seconden is. Wijzigingen gaan in na herladen.",
+        "data": {
+          "scan_interval": "Pollinterval (5-300 seconden)"
+        }
+      }
+    }
+  }
+}
